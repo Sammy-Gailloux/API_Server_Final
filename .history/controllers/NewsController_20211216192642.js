@@ -1,0 +1,1 @@
+const NewsRepo = require();
