@@ -28,9 +28,7 @@ function showRequestProcessTime() {
     let requestProcessEndTime = process.hrtime(requestProcessStartTime);
     console.log("Response time: ", Math.round((requestProcessEndTime[0] * 1000 + requestProcessEndTime[1] / 1000000) / 1000 * 10000) / 10000, "seconds");
 }
-function API_Endpoint(req, res) {
-    return require('./router').dispatch_API_EndPoint(req, res);
-}
+
 function showMemoryUsage() {
     const used = process.memoryUsage();
     console.log("RSet size:", Math.round(used.rss / 1024 / 1024 * 100) / 100, "Mb |",
